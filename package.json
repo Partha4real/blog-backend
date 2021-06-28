@@ -5,6 +5,9 @@
   "author": "partha",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
