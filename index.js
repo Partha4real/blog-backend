@@ -3,9 +3,8 @@ import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import connectDB from "./config/database.js";
-import userRoutes from './routes/userRoutes.js';
-import blogRoutes from './routes/blogRoutes.js';
-
+import userRoutes from "./routes/userRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
 
 // express init
 const app = express();
@@ -27,6 +26,9 @@ app.use(morgan("dev"));
 app.use(cors());
 
 // routes
+app.get("/", (req, res) => {
+  res.send("hello");
+});
 app.use("/user", userRoutes);
 app.use("/blog", blogRoutes);
 
